@@ -1,6 +1,6 @@
 'use strict';
 //require port from .env
-require.'dotenv'.config(.env)
+require('dotenv').config()
 
 //init express and assign to var - does  heavy lifting
 const express = require('express');
@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 
 //use this folder for info tell express whre to load html files from 
-// app.use(express.static('./public'));
+app.use(express.static('./public'));
 
 
 //listen for user to go to path  - create routes for serber to access .../path/path in URL
@@ -31,9 +31,9 @@ app.get('/data', (request, response) => {
   response.status(200).json(airplanes);
 });
 
-// app.get('/data', (request, response) => {
-//   response.status(200).redirect('index.html');
-// });
+ app.get('/data', (request, response) => {
+  response.status(200).redirect('index.html');
+});
 
 app.use('*', (request, response) => response.send(`Sorry, that route does not exist`));
 
