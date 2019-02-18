@@ -11,13 +11,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-//use this folder for info tell express whre to load html files from 
+//use this folder for info tell express whre to load html files from
 app.use(express.static('./public'));
 
 
 //listen for user to go to path  - create routes for serber to access .../path/path in URL
 app.get('/hello', (request, response) => {
-	response.static(200).send('Hello')
+  response.static(200).send('Hello')
 })
 
 
@@ -31,7 +31,7 @@ app.get('/data', (request, response) => {
   response.status(200).json(airplanes);
 });
 
- app.get('/data', (request, response) => {
+app.get('/data', (request, response) => {
   response.status(200).redirect('index.html');
 });
 
