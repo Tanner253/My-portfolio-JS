@@ -1,4 +1,4 @@
-# portfolio-301
+# portfolio- Was Deployed on heroku, working on redeploy
 Source Code was provided, and features were added.
  
 They key to this project was to be able to judge how long features took to be implemented based on how we evaluated our own coding ability. some features i completed faster than i had fguess while others i had taken longer than i thought i would, great exercise.
